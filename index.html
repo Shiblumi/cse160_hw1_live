@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+    <script src="lib/include/webgl-utils.js"></script>
+    <script src="lib/include/webgl-debug.js"></script>
+    <script src="lib/include/cuon-utils.js"></script>
+    <script src="lib/asg1.js"></script>
+    <script src="lib/Point.js"></script>
+    <script src="lib/Triangle.js"></script>
+    <script src="lib/Circle.js"></script>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+    <canvas id="webgl-preview" width="50" height="50">
+      Please use a browser that supports "canvas"
+    </canvas>
+    <br />
+
+    <div>
+      <input type="button" id="btn-clear-canvas" value="Clear Canvas" />
+      <h4 style="margin-bottom: 5px">Drawing Mode:</h4>
+      <input type="button" id="btn-square" value="Squares" />
+      <input type="button" id="btn-triangle" value="Triangles" />
+      <input type="button" id="btn-circle" value="Circles" />
+    </div>
+
+    <div>
+      <h4 style="margin-bottom: 5px">Shape Color:</h4>
+
+      <label for="slider-rgb-red">Red</label>
+      <input type="range" id="slider-red" min="0" max="255" value="255" />
+
+      <label for="slider-green">Green</label>
+      <input type="range" id="slider-green" min="0" max="255" value="255" />
+
+      <label for="slider-blue">Blue</label>
+      <input type="range" id="slider-blue" min="0" max="255" value="255" />
+
+      <label for="slider-alpha">Alpha</label>
+      <input type="range" id="slider-alpha" min="0" max="255" value="255" />
+    </div>
+    <br />
+
+    <div>
+      <label for="slider-shape-size">Shape Size</label>
+      <input type="range" id="slider-shape-size" min="0.0" max="40.0" />
+
+      <label for="slider-shape-size">(Circles) Segment Count:</label>
+      <input type="range" id="slider-segment-count" min="5" max="25" />
+    </div>
+  </body>
+</html>
